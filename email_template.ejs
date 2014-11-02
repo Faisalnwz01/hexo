@@ -1,0 +1,30 @@
+<html>
+<head><meta charset='utf-8'></head>
+<body>
+  <p>Hey <%= firstName %>,</p>
+  <br>
+  <p>
+    How are you doing? I'm doing well. It's been like <%= numMonthsSinceContact %> months
+    since we last talked. I'm learning to code full-time at Fullstack Academy and enjoying 
+    my time.
+  </p>
+  <p>
+   Also you can check out the guessing game i made for Fullstack Academy Foundation at:
+   <a href="http://faisalnwz01.github.io/Guessing-Game">Guessing Game</a>
+  </p>
+  <p>
+    I've been blogging about my experiences at Fullstack on my blog. 
+    Check out my new posts here: 
+    <a href="http://faisalnwz01.github.io">My Blog</a>
+  </p>
+  <p>
+    Keep in touch,<br>
+    Faisal
+  </p>
+  <ul>
+      <% for(var i=0; i<latestPosts.length; i++) {%>
+         <li><a href=<%= latestPosts[i].href %> <%= latestPosts[i].title %></a>  </li>
+      <% } %>
+    </ul>
+</body>
+</html>
